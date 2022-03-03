@@ -8,8 +8,8 @@ public class EjercicioEx2 {
 	public static void main (String[] args) {
 		int longitud=8;
 		palabrasMasLargasQue(longitud);
-		
 	}
+	
 	public static void palabrasMasLargasQue(int longitud) {
 		String nombre = "C:\\Users\\Luisao\\Desktop\\textoExamen.txt";
 		File file = new File(nombre);
@@ -39,7 +39,6 @@ public class EjercicioEx2 {
 				}
 			}
 			System.out.println(contador);
-		
 			f.close();
 		} catch(FileNotFoundException e) {
 			System.out.println("El fichero " + nombre + " no ha podido ser abierto.");
