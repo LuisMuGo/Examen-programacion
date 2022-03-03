@@ -55,16 +55,6 @@ public class JugadorEx {
 		this.vidas = vidas;
 	}
 	
-	public int habilidadDisparo(int disparo) {
-		int x = disparo*(int) (Math.random()*10);
-		return x;
-	}
-	
-	public int habilidadPorteria(int porteria) {
-		int x = porteria*(int) (Math.random()*10);
-		return x;
-	}
-	
 	@Override
 	public String toString() {
 		return nombre + dorsal + disparo + porteria + vidas;

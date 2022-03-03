@@ -6,7 +6,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EjercicioEx3 {
-	@SuppressWarnings("unused")
+	 /* 
+	  * Pre: recibe un nombre (nombre del fichero) desde el main
+	  * Post: Este método java lee un fichero.csv del que saca información de las consolas que paracen,
+	  * 	  las almacena en un ArrayList sin repetirlas.
+	  */
 	public static ArrayList<String> informacionVideojuegos(String nombre) {
 		File file = new File(nombre);
 		ArrayList<String> a = new ArrayList<String>();
@@ -49,6 +53,11 @@ public class EjercicioEx3 {
 		}
 		return a;
 	}
+	
+	/*
+	 * Pre: recibe un ArrayList
+	 * Post: Este método main manda la ubicación y nombre del archivo y muestra por pantalla el ArrayList que recibe
+	 */
 	public static void main (String[] args) {
 		String nombre = "C:\\Users\\Luisao\\Desktop\\ventasVideojuegos.csv";
 		ArrayList<String> a = informacionVideojuegos(nombre);

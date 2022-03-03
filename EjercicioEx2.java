@@ -5,11 +5,21 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class EjercicioEx2 {
+	
+	/*
+	 * Pre:---
+	 * Post: Este método main invoca el método palabrasMasLargasQue y le manda la longitud de la palabra(int)
+	 */
 	public static void main (String[] args) {
 		int longitud=8;
 		palabrasMasLargasQue(longitud);
 	}
 	
+	/*
+	 * Pre:recibe la longitud de la palabra desde el main
+	 * Post: este método java implementa un programa que lee un fichero de texto y muestra las palabras
+	 * 		 con la longitud mandada desde el main.
+	 */
 	public static void palabrasMasLargasQue(int longitud) {
 		String nombre = "C:\\Users\\Luisao\\Desktop\\textoExamen.txt";
 		File file = new File(nombre);
