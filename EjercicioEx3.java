@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EjercicioEx3 {
+	@SuppressWarnings("unused")
 	public static ArrayList<String> informacionVideojuegos(String nombre) {
 		File file = new File(nombre);
 		ArrayList<String> a = new ArrayList<String>();
@@ -16,6 +17,7 @@ public class EjercicioEx3 {
 				String linea = f.nextLine();
 				String[] palabra = linea.split(",");
 				boolean encontrado = false;
+				boolean esta = false;
 				if (contador>0) {
 					String consola="";
 					for (int i=0; i<palabra[2].length(); i++) {
@@ -24,10 +26,19 @@ public class EjercicioEx3 {
 						}
 					}
 					if (encontrado==true) {
-						System.out.println(palabra[3]);
+						consola=consola+palabra[3];
 					}
 					else {
-						System.out.println(palabra[2]);
+						consola=consola+palabra[2];
+					}
+					for (int j=0; j<a.size(); j++) {
+						if (a.get(j).equals(consola)) {
+							esta=true;
+							break;
+						}
+					}
+					if (esta==false) {
+						a.add(consola);
 					}
 				}
 				contador++;
@@ -42,7 +53,9 @@ public class EjercicioEx3 {
 		String nombre = "C:\\Users\\Luisao\\Desktop\\ventasVideojuegos.csv";
 		ArrayList<String> a = informacionVideojuegos(nombre);
 		for (int i=0; i<a.size(); i++) {
+			
 			System.out.println(a.get(i));
+			
 		}
 	}
 }
